@@ -1,6 +1,8 @@
 package com.example.hibernateonetoone;
 
+import com.example.hibernateonetoone.entity.Details;
 import com.example.hibernateonetoone.entity.Employee;
+import com.example.hibernateonetoone.repository.DetailsRepository;
 import com.example.hibernateonetoone.repository.EmployeeRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class AddEmpToDB {
     @Autowired
     EmployeeRepository employeeRepository;
+    @Autowired
+    DetailsRepository detailsRepository;
 
     @Test
     public void addEmpToDB () {
@@ -37,7 +41,10 @@ public class AddEmpToDB {
         employeeRepository.save(employee1);
         employeeRepository.save(employee2);
         employeeRepository.save(employee3);
+
+
     }
+
 
 
 
