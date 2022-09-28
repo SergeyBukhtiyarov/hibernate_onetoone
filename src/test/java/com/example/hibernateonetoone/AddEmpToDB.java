@@ -62,9 +62,14 @@ public class AddEmpToDB {
         employeeRepository.save(employee3);
 
 
+
         System.out.println(employee1);
 
 
+    }
+    @Test
+    public void deleteById () {
+        employeeRepository.deleteById(1);
     }
 
 
