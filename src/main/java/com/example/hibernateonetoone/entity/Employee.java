@@ -15,11 +15,8 @@ public class Employee {
     private String surname;
     private String department;
     private long salary;
-    @Column(name = "details_id",insertable = false,updatable = false)
-    private long details_id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "details_id")
     private Details empdetails;
 
 
