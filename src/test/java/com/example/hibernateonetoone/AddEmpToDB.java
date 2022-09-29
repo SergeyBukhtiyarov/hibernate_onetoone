@@ -16,22 +16,28 @@ public class AddEmpToDB {
     DetailsRepository detailsRepository;
 
     @Test
-    public void addEmpToDB () {
+    public void addEmpToDB() {
 
-        Details details1= new Details();
+        Details details1 = new Details();
         details1.setCity("Samara");
         details1.setEmail("bukhtiyarov@mail.com");
         details1.setPhone_number("1234567");
 
-        Details details2= new Details();
+        Details details2 = new Details();
         details2.setCity("Moscow");
         details2.setEmail("bukhtiyarov@mail.com");
         details2.setPhone_number("7654321");
 
-        Details details3= new Details();
+        Details details3 = new Details();
         details3.setCity("Norilsk");
         details3.setEmail("bukhtiyarov@mail.com");
         details3.setPhone_number("3456789");
+
+        Details details4 = new Details();
+        details4.setCity("Togliatti");
+        details4.setEmail("bukhtiyarov@mail.com");
+        details4.setPhone_number("12345");
+
 
         Employee employee1 = new Employee();
         employee1.setName("Sergey");
@@ -56,24 +62,30 @@ public class AddEmpToDB {
         employee3.setSalary(5000);
         employee3.setEmpdetails(details3);
 
+        Employee employee4 = new Employee();
+        employee4.setName("Igor");
+        employee4.setSurname("Ivanov");
+        employee4.setDepartment("IT");
+        employee4.setSalary(6000);
+        employee4.setEmpdetails(details4);
 
+        details4.setEmployee(employee4);
+        detailsRepository.save(details4);
         employeeRepository.save(employee1);
         employeeRepository.save(employee2);
         employeeRepository.save(employee3);
-
 
 
         System.out.println(employee1);
 
 
     }
+
     @Test
-    public void deleteById () {
-        employeeRepository.deleteById(1L);
-        detailsRepository.deleteById(2L);
+    public void deleteById() {
+//        employeeRepository.deleteById(1L);
+//        detailsRepository.deleteById(2L);
     }
-
-
 
 
 }
