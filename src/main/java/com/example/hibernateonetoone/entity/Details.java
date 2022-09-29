@@ -2,10 +2,7 @@ package com.example.hibernateonetoone.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -17,5 +14,7 @@ public class Details {
     private String phone_number;
     private String email;
 
+    @OneToOne(mappedBy = "empdetails", cascade = CascadeType.ALL)
+    private Employee employee;
 
 }

@@ -5,4 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface DetailsRepository extends JpaRepository<Details, Long> {
     Details findById(long id);
+    Details deleteById(long id);
 }

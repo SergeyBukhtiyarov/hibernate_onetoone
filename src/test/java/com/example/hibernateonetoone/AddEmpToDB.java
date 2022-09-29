@@ -69,7 +69,8 @@ public class AddEmpToDB {
     }
     @Test
     public void deleteById () {
-        employeeRepository.deleteById(1);
+        employeeRepository.deleteById(1L);
+        detailsRepository.deleteById(2L);
     }
 
 
