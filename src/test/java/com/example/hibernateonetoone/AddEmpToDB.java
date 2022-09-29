@@ -76,7 +76,12 @@ public class AddEmpToDB {
         employeeRepository.save(employee3);
 
 
+
         System.out.println(employee1);
+        Details e = detailsRepository.findById(2L);
+        System.out.println(e.getEmail());
+        System.out.println(e.getEmployee());
+//        System.out.println(detailsRepository.findById(2L));
 
 
     }
@@ -85,6 +90,7 @@ public class AddEmpToDB {
     public void deleteById() {
 //        employeeRepository.deleteById(1L);
 //        detailsRepository.deleteById(2L);
+
     }
 
 
