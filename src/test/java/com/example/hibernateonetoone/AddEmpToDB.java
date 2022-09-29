@@ -77,11 +77,10 @@ public class AddEmpToDB {
 
 
 
-        System.out.println(employee1);
-        Details e = detailsRepository.findById(2L);
-        System.out.println(e.getEmail());
-        System.out.println(e.getEmployee());
-//        System.out.println(detailsRepository.findById(2L));
+
+        System.out.println(employeeRepository.findById(1));
+        System.out.println(detailsRepository.findById(1));
+        //System.out.println(detailsRepository);
 
 
     }
